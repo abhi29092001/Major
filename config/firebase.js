@@ -2,14 +2,15 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import Constants from "expo-constants";
+require("dotenv").config();
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD_C4t1NCUjDPo9FX3JTngOPet69bsnoJI",
-  authDomain: "chatapp-a28e4.firebaseapp.com",
-  projectId: "chatapp-a28e4",
-  storageBucket: "chatapp-a28e4.appspot.com",
-  messagingSenderId: "107010551646",
-  appId: "1:107010551646:web:4ddaa2697f39dfe2de69cf",
+  apiKey: process.env.key,
+  authDomain: process.env.domain,
+  projectId: process.env.project,
+  storageBucket: process.env.bucket,
+  messagingSenderId: process.env.sender,
+  appId: process.env.app,
   databaseURL: Constants.expoConfig.extra.databaseURL,
 };
 
