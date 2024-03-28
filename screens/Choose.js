@@ -23,7 +23,7 @@ const Choose = ({ navigation }) => {
           <Text style={{ fontSize: 36, color: "white" }}>Patient</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate("Signup")}
+          onPress={() => navigation.navigate("Signup Doctor")}
           style={{
             backgroundColor: "#f57c00",
             borderRadius: 5,

@@ -1,5 +1,3 @@
-import "dotenv/config";
-
 export default {
   expo: {
     name: "Chat-App",
@@ -27,12 +25,12 @@ export default {
       favicon: "./assets/favicon.png",
     },
     extra: {
-      apiKey: process.env.API_KEY,
-      authDomain: process.env.AUTH_DOMAIN,
-      projectId: process.env.PROJECT_ID,
-      storageBucket: process.env.STORAGE_BUCKET,
-      messagingSenderId: process.env.MESSAGING_SENDER_ID,
-      appId: process.env.APP_ID,
+      apiKey: "AIzaSyD_C4t1NCUjDPo9FX3JTngOPet69bsnoJI",
+      authDomain: "chatapp-a28e4.firebaseapp.com",
+      projectId: "chatapp-a28e4",
+      storageBucket: "chatapp-a28e4.appspot.com",
+      messagingSenderId: "107010551646",
+      appId: "1:107010551646:web:4ddaa2697f39dfe2de69cf",
     },
   },
 };
