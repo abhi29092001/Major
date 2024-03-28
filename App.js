@@ -43,7 +43,6 @@ function AuthStack() {
       <Stack.Screen name="Choose" component={Choose} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Signup" component={Signup} />
-      <Stack.Screen name="Signup Doctor" component={SignUpDoc} />
     </Stack.Navigator>
   );
 }

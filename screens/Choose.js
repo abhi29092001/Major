@@ -1,4 +1,8 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 const Choose = ({ navigation }) => {
   return (
@@ -11,28 +15,51 @@ const Choose = ({ navigation }) => {
           backgroundColor: "white",
         }}
       >
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Signup")}
-          style={{
-            backgroundColor: "#f57c00",
-            borderRadius: "5",
-            paddingHorizontal: 15,
-            paddingVertical: 8,
-          }}
-        >
-          <Text style={{ fontSize: 36, color: "white" }}>Patient</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Signup Doctor")}
-          style={{
-            backgroundColor: "#f57c00",
-            borderRadius: 5,
-            paddingHorizontal: 15,
-            paddingVertical: 8,
-          }}
-        >
-          <Text style={{ fontSize: 36, color: "white" }}>Doctor</Text>
-        </TouchableOpacity>
+        <View className="bg-slate-50 shadow-md shadow-gray-500/50 rounded-lg">
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Signup")}
+            // style={{
+            //   backgroundColor: "#f57c00",
+            //   borderRadius: "5",
+            //   paddingHorizontal: 15,
+            //   paddingVertical: 8,
+            // }}
+          >
+            <Image
+              source={require("../assets/patient.png")}
+              style={{ height: hp(18), width: hp(18) }}
+            />
+            <Text
+              style={{ fontSize: 18, color: "black", textAlign: "center" }}
+              className="tracking-widest text-gray-100"
+            >
+              PATIENT
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+        <View className="bg-slate-50 shadow-md shadow-gray-500/50 rounded-lg">
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Signup")}
+            // style={{
+            //   backgroundColor: "#f57c00",
+            //   borderRadius: 5,
+            //   paddingHorizontal: 15,
+            //   paddingVertical: 8,
+            // }}
+          >
+            <Image
+              source={require("../assets/doctor.png")}
+              style={{ height: hp(18), width: hp(18) }}
+            />
+            <Text
+              style={{ fontSize: 18, color: "black", textAlign: "center" }}
+              className="tracking-widest text-gray-100"
+            >
+              DOCTOR
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
