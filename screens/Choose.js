@@ -7,6 +7,10 @@ import {
 const Choose = ({ navigation }) => {
   return (
     <View style={styles.container}>
+      <Image
+        style={styles.header}
+        source={require("../assets/header-login-screen.png")}
+      />
       <View
         style={{
           display: "flex",
@@ -61,6 +65,10 @@ const Choose = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
+      <Image
+        style={styles.footer}
+        source={require("../assets/footer-login-screen.png")}
+      />
     </View>
   );
 };
@@ -68,8 +76,17 @@ const Choose = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    position: "relative",
     alignItems: "center",
     justifyContent: "center",
+  },
+  header: {
+    position: "absolute",
+    top: 0,
+  },
+  footer: {
+    position: "absolute",
+    bottom: 0,
   },
 });
 

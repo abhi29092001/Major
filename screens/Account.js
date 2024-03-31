@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { signOut } from "firebase/auth";
 import { auth, database } from "../config/firebase";
@@ -11,7 +11,7 @@ const Account = () => {
   };
 
   return (
-    <View>
+    <View style={styles.container}>
       <View
         style={{
           display: "flex",
@@ -92,8 +92,24 @@ const Account = () => {
           <AntDesign name="logout" size={24} />
         </TouchableOpacity>
       </View>
+      <Image
+        style={styles.footer}
+        source={require("../assets/footer-login-screen.png")}
+      />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    position: "relative",
+  },
+  footer: {
+    position: "absolute",
+    bottom: 0,
+    right: 6,
+  },
+});
 
 export default Account;
